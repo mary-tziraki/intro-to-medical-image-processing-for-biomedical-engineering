@@ -1,7 +1,7 @@
 ---
 title: "2d image basics"
-teaching: 60
-exercises: 2
+teaching: 40
+exercises: 20
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
