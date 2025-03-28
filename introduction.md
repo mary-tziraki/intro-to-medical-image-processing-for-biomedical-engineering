@@ -1,19 +1,23 @@
 ---
-title: "Using Markdown"
-teaching: 10
+title: "2d image basics"
+teaching: 60
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is a 2D image?
+- What parameters would describe a 2D image?
+- How to view an image?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- describe different 2d image formats
+- explain size, dimensions, and compressions and their significance
+- opening and visualizing examples from the 2d imaging general dataset
+- identify/extract the data type, size, dimensions, and compression type from an image
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -104,10 +108,7 @@ Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- 2D images are matrices 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
