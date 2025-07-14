@@ -21,7 +21,9 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Introduction 
+
+This is imported from Carpenries 
 
 This is a lesson created via The Carpentries Workbench. It is written in
 [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
@@ -43,8 +45,25 @@ Carpentries lesson:
 
 Inline instructor notes can help inform instructors of timing challenges
 associated with the lessons. They appear in the "Instructor View"
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Introduction of the episode 01
+
+Digital images are part of modern life. With digital cameras and mobile phones, people generate and receive thousands of images every year in their pockets and computers. In addition, telescopes, medical imaging modalities and sophisticated cameras in research are designed to capture, store and digitally propagate copies of the original subject image indefinitely without losing image quality. High-quality images are crucial for medical diagnostics, imaging the universe and the microcosmos and solving numerous research problems.
+
+ In all forms of digital imaging, information about the object are collected by sensors and then converted into numbers that represent a measurement of a specific property. This measurements could be based on many different properties, including visual light (digital photography), X-ray attenuation (digital radiography, fluoroscopy, and CT), gamma rays emission from injected radioactive materials (digital scintigraphy, SPECT, and PET), transmissions of sound (ultrasonography).
+ 
+The term digital imaging also implies processing, compression storage, printing and display of such images. 
+2-dimensional (2D) images are stored in computer memories in 2-dimensional rectangular arrays (like a matrix) of hundreds, thousands or millions of discrete 'picture elements' called pixels. Each pixel holds a number or multiple numbers representing the pixel's intensity or colour. The pixel arrays could be manipulated with mathematics and algorithms to give high-quality image outputs or valuable information for analysis, and this is called image processing. As computer systems have become faster and more powerful, Image processing is part of extensive image analysis and a growing area of research. Some well-known 2D digital imaging formats are BMP, PNG, TIFF and JPEG.
+
+
+Image can also be described that represent measurements throughout a three-dimensional volume. These 3-D images are most often seen in medical imaging. Medical Images (MRI, CT, PET) are often stored at acquisition using a format described by an industry standard known as Digital Imaging in Communications and Medicine (DICOM). 
+
+
+Considering the large volumes of data that can be involved and the time-consuming and error-prone nature of manual processing, it can be advantageous, or even necessary, to automate the image processing and analysis steps using a computer program. While there are a number of widely available free imaging packages available, there will be times when they may be limiting to what you are trying to achieve, and thus you may need to write some bespoke code to meet your research objectives. This series of episodes aims to give you an initial understanding of how to analyze and process imaging data using Python scripts. For the purpose of these lessons, we will focus on imaging analysis involving high-resolution structural MR images of the brain.
+
+In this notebook, we will learn the basic information that a 2D image contains. It introduces an open-source toolkit for processing image data: the Python programming language and the scikit-image (skimage) library. With careful experimental design, Python code can be a powerful instrument in answering many different questions.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
