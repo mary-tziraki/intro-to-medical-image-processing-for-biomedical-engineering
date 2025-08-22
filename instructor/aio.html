@@ -334,7 +334,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">2d image basics</a></p>
 <hr>
-<p>Last updated on 2025-03-28 |
+<p>Last updated on 2025-08-22 |
 
         <a href="https://github.com/Devaraj-G/intro-to-medical-image-processing-for-biomedical-engineering/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 60 minutes</p>
@@ -377,6 +377,7 @@ type from an image</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
+<p>This is imported from Carpenries</p>
 <p>This is a lesson created via The Carpentries Workbench. It is written
 in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
 for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
@@ -401,7 +402,7 @@ reinforce the objectives.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -410,10 +411,63 @@ View”</p>
 </div>
 </div>
 </div>
+</section><div class="section level1">
+<h1 id="introduction-of-the-episode-01">Introduction of the episode 01<a class="anchor" aria-label="anchor" href="#introduction-of-the-episode-01"></a>
+</h1>
+<p>Digital images are part of modern life. With digital cameras and
+mobile phones, people generate and receive thousands of images every
+year in their pockets and computers. In addition, telescopes, medical
+imaging modalities and sophisticated cameras in research are designed to
+capture, store and digitally propagate copies of the original subject
+image indefinitely without losing image quality. High-quality images are
+crucial for medical diagnostics, imaging the universe and the
+microcosmos and solving numerous research problems.</p>
+<p>In all forms of digital imaging, information about the object are
+collected by sensors and then converted into numbers that represent a
+measurement of a specific property. This measurements could be based on
+many different properties, including visual light (digital photography),
+X-ray attenuation (digital radiography, fluoroscopy, and CT), gamma rays
+emission from injected radioactive materials (digital scintigraphy,
+SPECT, and PET), transmissions of sound (ultrasonography).</p>
+<p>The term digital imaging also implies processing, compression
+storage, printing and display of such images. 2-dimensional (2D) images
+are stored in computer memories in 2-dimensional rectangular arrays
+(like a matrix) of hundreds, thousands or millions of discrete ‘picture
+elements’ called pixels. Each pixel holds a number or multiple numbers
+representing the pixel’s intensity or colour. The pixel arrays could be
+manipulated with mathematics and algorithms to give high-quality image
+outputs or valuable information for analysis, and this is called image
+processing. As computer systems have become faster and more powerful,
+Image processing is part of extensive image analysis and a growing area
+of research. Some well-known 2D digital imaging formats are BMP, PNG,
+TIFF and JPEG.</p>
+<p>Image can also be described that represent measurements throughout a
+three-dimensional volume. These 3-D images are most often seen in
+medical imaging. Medical Images (MRI, CT, PET) are often stored at
+acquisition using a format described by an industry standard known as
+Digital Imaging in Communications and Medicine (DICOM).</p>
+<p>Considering the large volumes of data that can be involved and the
+time-consuming and error-prone nature of manual processing, it can be
+advantageous, or even necessary, to automate the image processing and
+analysis steps using a computer program. While there are a number of
+widely available free imaging packages available, there will be times
+when they may be limiting to what you are trying to achieve, and thus
+you may need to write some bespoke code to meet your research
+objectives. This series of episodes aims to give you an initial
+understanding of how to analyze and process imaging data using Python
+scripts. For the purpose of these lessons, we will focus on imaging
+analysis involving high-resolution structural MR images of the
+brain.</p>
+<p>In this notebook, we will learn the basic information that a 2D image
+contains. It introduces an open-source toolkit for processing image
+data: the Python programming language and the scikit-image (skimage)
+library. With careful experimental design, Python code can be a powerful
+instrument in answering many different questions.</p>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-1-can-you-do-it" class="callout-inner">
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
@@ -432,7 +486,7 @@ View”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -447,8 +501,10 @@ View”</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?</h3>
 <div class="callout-content">
 
 </div>
@@ -459,7 +515,7 @@ View”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -467,9 +523,9 @@ View”</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<div class="section level2">
+<h2 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
 </h2>
-<hr class="half-width">
 <p>You can use standard markdown for static figures with the following
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
@@ -478,8 +534,8 @@ syntax:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Callout sections can highlight information.</p>
 <p>They are sometimes used to emphasise particularly important points
@@ -489,9 +545,10 @@ to a commonly-asked question.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</div>
+<div class="section level2">
+<h2 id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
 </h2>
-<hr class="half-width">
 <p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
 create dynamic reports with {knitr}, so we now use mathjax to describe
 this:</p>
@@ -501,8 +558,8 @@ this:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
 <li>2D images are matrices</li>
@@ -514,7 +571,8 @@ this:</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-02"><p>Content from <a href="02.html">2d image file i/o</a></p>
+</div>
+</div></section><section id="aio-02"><p>Content from <a href="02.html">2d image file i/o</a></p>
 <hr>
 <p>Last updated on 2025-03-28 |
 
@@ -591,8 +649,10 @@ View”</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-1-can-you-compare-images-of-different-formats" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you compare images of different formats?</h3>
+<h3 class="callout-title">Challenge 1: Can you compare images of
+different formats?</h3>
 <div class="callout-content">
 <ul>
 <li>open any .png image from the dataset to visualize it</li>
@@ -628,8 +688,10 @@ format?</em></li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?</h3>
 <div class="callout-content">
 
 </div>
@@ -659,8 +721,8 @@ syntax:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Callout sections can highlight information.</p>
 <p>They are sometimes used to emphasise particularly important points
@@ -682,8 +744,8 @@ this:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
 <li>compression is useful for reducing image sizes</li>
@@ -776,8 +838,10 @@ View”</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-1-can-you-sellect-difefferent-colour-images" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you sellect difefferent colour Images ?</h3>
+<h3 class="callout-title">Challenge 1: Can you sellect difefferent
+colour Images ?</h3>
 <div class="callout-content">
 <p>What is the output of this command? Separate Images in red, green,
 blue</p>
@@ -810,8 +874,10 @@ blue</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<h3 class="callout-title">Challenge 2: how do you nest solutions within
+challenge blocks?</h3>
 <div class="callout-content">
 
 </div>
@@ -841,8 +907,8 @@ syntax:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Callout sections can highlight information.</p>
 <p>They are sometimes used to emphasise particularly important points
@@ -864,8 +930,8 @@ this:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
 <li>2D image colourmaps</li>
@@ -902,7 +968,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.12" class="external-link">sandpaper (0.16.12)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.6" class="external-link">varnish (1.0.6)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -925,8 +991,8 @@ any links that you are not going to use.
   "url": "https://Devaraj-G.github.io/intro-to-medical-image-processing-for-biomedical-engineering/instructor/aio.html",
   "identifier": "https://Devaraj-G.github.io/intro-to-medical-image-processing-for-biomedical-engineering/instructor/aio.html",
   "dateCreated": "2025-03-27",
-  "dateModified": "2025-07-08",
-  "datePublished": "2025-07-08"
+  "dateModified": "2025-08-22",
+  "datePublished": "2025-08-22"
 }
 
   </script><script>
