@@ -1,4 +1,72 @@
 ---
+title: "Setup"
+teaching: 40
+exercises: 20
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- Which programming language will we use?
+- What libraries do we need to visualise and process images?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- describe different 2d image formats
+- explain size, dimensions, and compressions and their significance
+- opening and visualizing examples from the 2d imaging general dataset
+- identify/extract the data type, size, dimensions, and compression type from an image
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction 
+
+This is imported from Carpenries 
+
+This is a lesson created via The Carpentries Workbench. It is written in
+[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
+[R Markdown][r-markdown] for dynamic files that can render code into output. 
+Please refer to the [Introduction to The Carpentries 
+Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+
+What you need to know is that there are three sections required for a valid
+Carpentries lesson:
+
+ 1. `questions` are displayed at the beginning of the episode to prime the
+    learner for the content.
+ 2. `objectives` are the learning objectives for an episode displayed with
+    the questions.
+ 3. `keypoints` are displayed at the end of the episode to reinforce the
+    objectives.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+Inline instructor notes can help inform instructors of timing challenges
+associated with the lessons. They appear in the "Instructor View"
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# 
+
+Digital images are part of modern life and science. Lots of scientific disciplines use images and process them to answer questions. From Astronomy, Medicine, Material Science and Biomedical sciences images are a core part of the research.
+The aim of this lesson is to introduce the 'Anatomy of a image' and teach how to do basic manipulations and processing. The content is designed for Biomedical sciences and engineering and could be widely used in Medicine and any relevant discipline 
+It is intended for learners with no prior experience. 
+
+## PREREQUISITES
+
+This lesson is designed for novices with no nessasary prior experience in Python. 
+If you want to have some working knowledge of the Unixe shell and Python the following resourses migh be usefull.
+- Software Carpentry Unix lessons (use urls)
+- Software Carpentry Python lessons (use urls)
+
+## Overview 
+This lesson is designed to be run on either personal computer or in a web-based interactive computational enviroments in the Software Carpentries interface.
+
+
+
+----
 title: "2d image basics"
 teaching: 40
 exercises: 20
@@ -46,6 +114,7 @@ Carpentries lesson:
 Inline instructor notes can help inform instructors of timing challenges
 associated with the lessons. They appear in the "Instructor View"
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Introduction of the episode 01
 
@@ -63,6 +132,76 @@ Image can also be described that represent measurements throughout a three-dimen
 Considering the large volumes of data that can be involved and the time-consuming and error-prone nature of manual processing, it can be advantageous, or even necessary, to automate the image processing and analysis steps using a computer program. While there are a number of widely available free imaging packages available, there will be times when they may be limiting to what you are trying to achieve, and thus you may need to write some bespoke code to meet your research objectives. This series of episodes aims to give you an initial understanding of how to analyze and process imaging data using Python scripts. For the purpose of these lessons, we will focus on imaging analysis involving high-resolution structural MR images of the brain.
 
 In this notebook, we will learn the basic information that a 2D image contains. It introduces an open-source toolkit for processing image data: the Python programming language and the scikit-image (skimage) library. With careful experimental design, Python code can be a powerful instrument in answering many different questions.
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 1: Can you do it?
+
+What is the output of this command?
+
+```r
+paste("This", "new", "lesson", "looks", "good")
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```output
+[1] "This new lesson looks good"
+```
+
+:::::::::::::::::::::::::::::::::
+
+
+## Challenge 2: how do you nest solutions within challenge blocks?
+
+:::::::::::::::::::::::: solution 
+
+You can add a line with at least three colons and a `solution` tag.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Figures
+
+You can use standard markdown for static figures with the following syntax:
+
+`![optional caption that appears below the figure](figure url){alt='alt text for
+accessibility purposes'}`
+
+![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Callout sections can highlight information.
+
+They are sometimes used to emphasise particularly important points
+but are also used in some lessons to present "asides": 
+content that is not central to the narrative of the lesson,
+e.g. by providing the answer to a commonly-asked question.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+## Math
+
+One of our episodes contains $\LaTeX$ equations when describing how to create
+dynamic reports with {knitr}, so we now use mathjax to describe this:
+
+`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+
+Cool, right?
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- 2D images are matrices 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+- 
+
+-image (skimage) library. With careful experimental design, Python code can be a powerful instrument in answering many different questions.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
