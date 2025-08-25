@@ -6,16 +6,17 @@ exercises: 20
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is a 2D image?
-- What parameters would describe a 2D image?
-- How to view an image?
-
+- Why is image processing an essential learning topic for a biomedical engineer?
+- Which imaging modalities are used in the biomedical fielsd?
+- How does a researcher/engineer/ clinician know if an image is 2D or 3D?
+- Why is automation in image processing necessary?
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- describe different 2d image formats
-- explain size, dimensions, and compressions and their significance
+- Recognise scientific questions that can be solved with Image processing.
+- Explain why learning about image processing is essential for a biomedical engineer.
+- Identify the 2D and 3D imaging modalities used in the biomedical field.
 - opening and visualizing examples from the 2d imaging general dataset
 - identify/extract the data type, size, dimensions, and compression type from an image
 
