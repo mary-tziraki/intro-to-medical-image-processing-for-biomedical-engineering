@@ -1,5 +1,5 @@
 ---
-title: "2d image basics"
+title: "Introduction to Image Processing in Biomedical Applications"
 teaching: 40
 exercises: 20
 ---
@@ -49,7 +49,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 # Introduction of the episode 01
 
-Digital images are part of modern life. With digital cameras and mobile phones, people generate and receive thousands of images every year in their pockets and computers. In addition, telescopes, medical imaging modalities and sophisticated cameras in research are designed to capture, store and digitally propagate copies of the original subject image indefinitely without losing image quality. High-quality images are crucial for medical diagnostics, imaging the universe and the microcosmos and solving numerous research problems.
+Digital images are part of modern life, with digital cameras and mobile phones, people generate and receive thousands of images every year in their pockets and computers. In addition, telescopes, medical imaging modalities and sophisticated cameras in research are designed to capture, store and digitally propagate copies of the original subject image indefinitely without losing image quality. High-quality images are crucial for medical diagnostics, imaging the universe and the microcosmos and solving numerous research problems.
 
  In all forms of digital imaging, information about the object are collected by sensors and then converted into numbers that represent a measurement of a specific property. This measurements could be based on many different properties, including visual light (digital photography), X-ray attenuation (digital radiography, fluoroscopy, and CT), gamma rays emission from injected radioactive materials (digital scintigraphy, SPECT, and PET), transmissions of sound (ultrasonography).
  
