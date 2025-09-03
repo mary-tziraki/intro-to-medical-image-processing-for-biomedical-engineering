@@ -1,6 +1,11 @@
-# Introduction to image processing for biomedical engineering
+# Introduction to image processing for biomedical engineering.
 
 This carpentries lesson teaches the basics of image processing catered to biomedical engineers.
+It starts from the description of a simple 2D image and how we can manipulate/process it.
+More advance topic include 3D images in medicine, how we store them and how we procees them.
+
+This lesson address the needs for 1st year undergraduate students in biomedical engineering and any other student/researchers wanted learn about image processing for their studies or projects. Any one is welcome to take the workshop. Prior familiarity with Python is required. People migh be interested in taking SC lesson on Python. This lesson is in pre-alpha stage of development
+
 
 For any questions, please contact [@mary-tziraki](https://github.com/mary-tziraki) and [@Devaraj-G](https://github.com/Devaraj-G)
 
